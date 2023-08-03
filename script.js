@@ -44,7 +44,7 @@ const quiz = [
     picture: "img/nora.jpg",
     question: "How many brothers did Ron Weasley have ?",
     trueAnswer: 2,
-    answers: ["trzech", "czterech", "pięciu", "sześciu"],
+    answers: ["three", "four", "five", "six"],
   },
   {
     picture: "img/czaraOgnia.jpg",
