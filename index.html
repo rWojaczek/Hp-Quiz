@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <button class="start_button">
+      click here to start Harry Potter quiz
+
+      <p class="text hidden">
+        <!-- Uroczyście przysięgam że knuję coś niedobrego -->
+        I solemnly swear that I am up to no good
+      </p>
+    </button>
+
+    <div class="quiz hidden">
+      <div class="pic">
+        <span class="question_number"></span>
+        <img class="picture" src="" alt="Zdjęcie" />
+      </div>
+      <div class="rigthSide">
+        <p class="question"></p>
+        <ul class="answerList">
+          <li class="answer answer1"></li>
+          <li class="answer answer2"></li>
+          <li class="answer answer3"></li>
+          <li class="answer answer4"></li>
+        </ul>
+      </div>
+
+      <button class="next_button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <div class="finalResoult hidden">
+      <p class="finalScore"></p>
+      <img class="finalImage" src="" />
+    </div>
+  </body>
+</html>
