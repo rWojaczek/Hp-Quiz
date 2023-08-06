@@ -21,7 +21,7 @@ body {
 .quiz {
   cursor: url("magic.svg"), auto;
   font-size: 20px;
-  line-height: 2;
+  /* line-height: 2; */
   letter-spacing: 2px;
   background-color: rgba(0, 0, 0, 0.644);
   position: absolute;
@@ -30,7 +30,8 @@ body {
   transform: translate(-50%, -50%);
   width: 60%;
   min-width: fit-content;
-  height: 60%;
+  min-height: 60%;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,7 +62,8 @@ ul {
   gap: 30px;
   list-style: none;
   justify-content: center;
-  width: 100%;
+  /* width: 100%; */
+  /* height: 25%; */
 }
 
 li {
@@ -142,7 +144,6 @@ li:hover {
   transform: translate(-50%, 50%);
   background: none;
   border: none;
-  font-weight: 400;
   cursor: pointer;
 }
 
@@ -153,7 +154,7 @@ li:hover {
 }
 
 .typed {
-  font-size: 26px;
+  font-size: 24px;
   overflow: hidden;
   white-space: nowrap;
   width: 0;
@@ -170,7 +171,7 @@ li:hover {
 }
 
 .picture {
-  height: 100%;
+  /* height: 100%; */
   max-width: 375px;
   border-radius: 30px;
   border: 1px solid rgb(27, 116, 119);
@@ -180,11 +181,11 @@ li:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 90%;
+  height: 100%;
   width: 50%;
   /* align-content: space-between; */
   gap: 10px;
-  justify-content: space-between;
+  justify-content: center;
   /* align-content: space-between; */
 }
 
@@ -233,50 +234,55 @@ li:hover {
 
 @media screen and (max-width: 920px) {
   .quiz {
-    font-size: 18px;
+    color: rgb(146, 168, 189);
+
+    font-size: 16px;
     flex-direction: column;
-    width: 100%;
+    /* width: 100%; */
+    width: fit-content;
     height: fit-content;
-    min-height: 100%;
-    justify-content: space-around;
+    /* min-height: 100vh; */
+    justify-content: center;
     align-items: center;
     border-radius: 0px;
   }
 
   .finalImage {
-    height: 60%;
+    height: 80%;
   }
 
   body {
-    background-size: cover;
-    background-position: 50% -10%;
+    background-size: 70vh;
+    background-position: 50% 10%;
   }
 
   .finalResoult {
-    width: 100vw;
+    width: 80%;
   }
 
   .finalScore {
-    color: white;
     font-size: 20px;
     opacity: 1;
     margin-bottom: 20px;
   }
 
   .question {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 10px;
     text-align: center;
   }
 
   .pic {
-    height: 50%;
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
     align-items: center;
+    justify-content: space-around;
   }
 
   .picture {
-    height: 40vh;
-    width: 80vw;
+    height: 80%;
+    /* width: 80vw; */
   }
 
   .start_button {
@@ -284,16 +290,17 @@ li:hover {
   }
   .next_button {
     left: 85%;
-    /* top: 5%; */
+    top: 45%;
   }
   .rigthSide {
-    height: 50%;
-    width: 100%;
+    height: 50vh;
+
+    width: 90%;
     /* align-items: stretch; */
   }
 
   li:hover {
-    animation: goUp 0.3s 0.1s linear forwards;
+    animation: goUp 0.3s 0.1s linear both;
   }
 
   @keyframes goUp {

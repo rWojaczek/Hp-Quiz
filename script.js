@@ -155,7 +155,7 @@ const showFinalScore = function () {
 
   finalScore.innerHTML =
     resoult === 1
-      ? ` ${resoult} point to Gryffinfor`
+      ? ` ${resoult} point to Gryffindor`
       : `${resoult} points to Gryffindor`;
 
   finalImage.src = resoult < 5 ? "img/minervaBad.jpg" : "img/minervaGood.jpg";
