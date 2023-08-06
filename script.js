@@ -116,7 +116,7 @@ answers.forEach(function (el) {
       console.log(resoult);
     }
     if (index !== quiz[counter3].trueAnswer && wasClicked) {
-      resoult = resoult - resoult;
+      resoult--;
       wasClicked = false;
       console.log(resoult);
     }
