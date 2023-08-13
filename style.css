@@ -21,7 +21,6 @@ body {
 .quiz {
   cursor: url("magic.svg"), auto;
   font-size: 20px;
-  /* line-height: 2; */
   letter-spacing: 2px;
   background-color: rgba(0, 0, 0, 0.644);
   position: absolute;
@@ -62,14 +61,11 @@ ul {
   gap: 30px;
   list-style: none;
   justify-content: center;
-  /* width: 100%; */
-  /* height: 25%; */
 }
 
 li {
   border-radius: 10px;
   border: 1px solid rgb(27, 116, 119);
-  /* text-align: center; */
   display: flex;
   text-align: center;
   justify-content: center;
@@ -78,10 +74,6 @@ li {
   padding: 20px;
   width: 180px;
   height: 80px;
-  /* width: 180px; */
-  /* min-height: 76px; */
-  /* overflow-wrap: break-word;
-  word-wrap: normal; */
 }
 
 li:hover {
@@ -117,6 +109,18 @@ li:hover {
   border: none;
   cursor: pointer;
   width: 50px;
+}
+
+.tryAgain {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  border-radius: 25%;
+  opacity: 80%;
+  box-shadow: 2px 2px 5px 5px black;
+  cursor: pointer;
 }
 
 .choosen {
@@ -171,7 +175,6 @@ li:hover {
 }
 
 .picture {
-  /* height: 100%; */
   max-width: 375px;
   border-radius: 30px;
   border: 1px solid rgb(27, 116, 119);
@@ -183,10 +186,8 @@ li:hover {
   align-items: center;
   height: 100%;
   width: 50%;
-  /* align-content: space-between; */
   gap: 10px;
   justify-content: center;
-  /* align-content: space-between; */
 }
 
 .h-6.w-6 {
@@ -238,10 +239,8 @@ li:hover {
 
     font-size: 16px;
     flex-direction: column;
-    /* width: 100%; */
     width: fit-content;
     height: fit-content;
-    /* min-height: 100vh; */
     justify-content: center;
     align-items: center;
     border-radius: 0px;
@@ -252,8 +251,8 @@ li:hover {
   }
 
   body {
-    background-size: 70vh;
-    background-position: 50% 10%;
+    background-size: 60vh;
+    background-position: 50% 5%;
   }
 
   .finalResoult {
@@ -274,7 +273,7 @@ li:hover {
 
   .pic {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     height: 50vh;
     align-items: center;
     justify-content: space-around;
@@ -282,7 +281,6 @@ li:hover {
 
   .picture {
     height: 80%;
-    /* width: 80vw; */
   }
 
   .start_button {
@@ -295,8 +293,7 @@ li:hover {
   .rigthSide {
     height: 50vh;
 
-    width: 90%;
-    /* align-items: stretch; */
+    width: 100%;
   }
 
   li:hover {
@@ -312,5 +309,32 @@ li:hover {
       color: rgb(27, 116, 119);
       transform: translateY(-10px);
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .quiz {
+    height: auto;
+  }
+
+  ul {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    width: 100%;
+    word-wrap: normal;
+  }
+  li {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .typed {
+    word-wrap: break-word;
+  }
+}
+
+@media screen and (max-height: 650px) {
+  li {
+    padding: 5px;
   }
 }

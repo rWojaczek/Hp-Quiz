@@ -84,7 +84,6 @@ const quiz = [
 
 const questionNumber = document.querySelector(".question_number");
 const question = document.querySelector(".question");
-const answerList = document.querySelector(".answerList");
 const answers = document.querySelectorAll(".answer");
 const nextBtn = document.querySelector(".next_button");
 const startBtn = document.querySelector(".start_button");
@@ -96,6 +95,7 @@ const finalResoult = document.querySelector(".finalResoult");
 const finalImage = document.querySelector(".finalImage");
 const body = document.querySelector("body");
 const typedText = document.querySelector(".text");
+const tryAgainBtn = document.querySelector(".tryAgain");
 
 let counter = -1;
 let counter2 = 0;
@@ -110,15 +110,13 @@ answers.forEach(function (el) {
     answers.forEach((el) => el.classList.remove("choosen"));
     e.target.classList.toggle("choosen");
 
-    if (index === quiz[counter3].trueAnswer && !wasClicked) {
+    if (index === quiz[counter].trueAnswer && !wasClicked) {
       wasClicked = true;
       resoult++;
-      console.log(resoult);
     }
-    if (index !== quiz[counter3].trueAnswer && wasClicked) {
+    if (index !== quiz[counter].trueAnswer && wasClicked) {
       resoult--;
       wasClicked = false;
-      console.log(resoult);
     }
   });
 });
@@ -131,7 +129,6 @@ const showNextQuestion = function () {
   wasClicked = false;
   counter++;
   counter2++;
-  counter3++;
   questionNumber.innerHTML = `Question Nr.${counter2}`;
 
   question.innerHTML = quiz[counter].question.toUpperCase();
@@ -149,6 +146,7 @@ const showFinalScore = function () {
   finalResoult.classList.remove("hidden");
   document.querySelector(".next_button").style.display = "none";
 
+  tryAgainBtn.classList.remove("hidden");
   finalResoult.classList.add("animateFinalResoult");
   finalImage.classList.add("animate");
   finalScore.classList.add("animate");
@@ -183,3 +181,22 @@ startBtn.addEventListener("click", function () {
 
   setTimeout(start, 5000);
 });
+
+const startOver = function () {
+  quizBox.classList.add("hidden");
+  startBtn.classList.remove("hidden");
+  document.querySelector(".next_button").style.display = "none";
+  finalResoult.classList.add("hidden");
+  body.style.backgroundImage = "url(img/back2.jpg)";
+  body.style.backgroundRepeat = "no-repeat";
+  body.style.backgroundSize = "70vh";
+  typedText.classList.add("hidden");
+  typedText.classList.remove("typed");
+  counter = -1;
+  counter2 = 0;
+  resoult = 0;
+  wasClicked = false;
+  tryAgainBtn.classList.add("hidden");
+};
+
+tryAgainBtn.addEventListener("click", startOver);
